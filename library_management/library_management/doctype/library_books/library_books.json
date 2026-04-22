@@ -10,6 +10,8 @@
   "isbn",
   "book_name",
   "accession_number",
+  "qr_code",
+  "qr_code_preview",
   "author",
   "status",
   "branch",
@@ -112,16 +114,16 @@
    "fieldtype": "Column Break"
   },
   {
-  "fieldname": "quantity",
-  "fieldtype": "Int", 
-  "label": "Quantity",
-  "reqd": 1
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "reqd": 1
   },
   {
-  "fieldname": "available_quantity",
-  "fieldtype": "Int",  
-  "label": "Available Quantity",
-  "reqd": 1
+   "fieldname": "available_quantity",
+   "fieldtype": "Int",
+   "label": "Available Quantity",
+   "reqd": 1
   },
   {
    "fieldname": "bill_no_and_date",
@@ -154,13 +156,24 @@
    "fieldtype": "Check",
    "label": "Take Home",
    "reqd": 1
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "QR code"
+  },
+  {
+   "fieldname": "qr_code_preview",
+   "fieldtype": "HTML",
+   "label": "QR Code Preview"
   }
  ],
  "grid_page_length": 50,
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-24 16:43:54.038751",
+ "modified": "2026-04-20 15:58:27.483840",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Books",
@@ -181,6 +194,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
